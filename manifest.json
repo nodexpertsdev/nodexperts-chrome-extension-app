@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "NodeXperts Feed",
+  "description": "This extension will show all the latest activities at NodeXperts",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "www/imgs/icon.png",
+   "default_popup": "index.html"
+  },
+  "permissions": [
+   "activeTab"
+ ],
+ "content_scripts": [
+  {
+    "matches": ["*://*/*"],
+    "js": [
+      "www/scripts/jquery-3.2.1.min.js",
+      "www/scripts/script.js"
+    ],
+    "css": [
+      "www/style.css"
+    ]
+  }
+]
+}
