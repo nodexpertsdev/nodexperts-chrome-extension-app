@@ -3,15 +3,34 @@
 <script src="www/scripts/jquery-3.2.1.min.js"></script>
 <script src="www/scripts/script.js"></script>
 
-<div class="container" id="container">
+<div id="nodexperts-feed-container">
   <div class="popup-title">
-    <a class="popup-title-link" href='http://www.nodexperts.com' target='_blank'>NodeXperts Feed</a>
+    <div class="nodexperts-hedaer-pic">
+      <a href='http://www.nodexperts.com' target='_blank'>
+        <img src="www/imgs/nodexperts.jpg" alt="NodeXperts">
+      </a>
+    </div>
+    <div style="float: right;">
+        <button class="category-btn" value="Categories">
+          <span class="category-btn-text">Categories</span>
+        </button>
+        <div class="category-list" style="display: none">
+            <span class="arr"></span>
+            <ul class="drop-down" id="categories">
+              <li><a class="cu-category" id="blogs">Blogs</a></li>
+              <li><a class="cu-category" id="workshops">Workshops</a></li>
+              <li><a class="cu-category" id="packages">Packages</a></li>
+              <li><a class="cu-category" id="daily-quotes">Daily Quotes</a></li>
+              <li><a class="cu-category" id="news">News</a></li>
+            </ul>
+        </div>
+    </div>
   </div>
   <div class="feeds">
   </div>
   <div class="footer">
     <span class="show-more">
-        <a href="https://www.nodexperts.com" id="all" target="_blank">All News</a>
+        <a href="https://www.nodexperts.com" id="all" target="_blank">NodeXperts</a>
     </span>
   </div>
 </div>
