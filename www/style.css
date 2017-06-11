@@ -1,4 +1,4 @@
-body {
+#nodexperts-feed-container {
   width: 440px;
   height: 550px;
   margin: 0;
@@ -6,12 +6,11 @@ body {
   overflow: hidden;
 }
 
-#container {
-  width: 440px;
-  height: 550px;
-  margin: 0;
+.nodexperts-hedaer-pic > a > img {
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
+  height: 50px;
+  float: left;
 }
 
 .popup-title {
@@ -34,33 +33,76 @@ body {
   cursor: pointer;
 }
 
+.category-btn {
+  width: 80px;
+  height: 26px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.category-btn-text {
+  font-family: inherit;
+  font-weight: 700;
+  font-style: inherit;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+}
+
+.drop-down > li {
+  height: 20px;
+  padding: 3px 14px;
+}
+
+.drop-down > li > a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+}
+
+.drop-down > li > a:hover {
+    border-bottom: 1px solid #888888;
+}
+
+.category-list > span.arr {
+    display: block;
+    border-style: solid;
+    position: absolute;
+    top: -9px;
+    right: 20px;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent lawngreen transparent;
+    z-index: 9997;
+}
+
+.category-list {
+    min-width: 150px;
+    height: auto;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    background: #fff;
+    border-top: 4px solid lawngreen;
+    box-shadow: 0 3px 7px 0 rgb( 78, 90, 99 );
+    z-index: 9997;
+}
+
 .feed-wrap {
   padding: 14px 11px;
   border-bottom: 1px solid #cfcfcf;
   max-height: 67px;
-  min-height: 67px;
-  opcity: 0.7;
+  min-height: 80px;
 }
 
 .feed-content {
-   max-width: 100%;
-   max-height: 69px;
-   overflow: hidden;
-}
-
-.footer {
-  width: 100%;
-  height: 26px;
-  background: #222;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 26px;
-  color: #fff;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
+  opacity: : 0.7;
+  max-width: 100%;
+  max-height: 69px;
+  overflow: hidden;
 }
 
 .feeds {
@@ -80,10 +122,11 @@ body {
 }
 
 .feed-img {
-  width: 100px;
   float: left;
   display: block;
   margin-top: 2px;
+  height: 65px;
+  margin-right: 11px;
 }
 
 .feed-title {
@@ -99,7 +142,44 @@ body {
 .feed-desc {
   font-size: 12px;
   margin: 0;
-  max-height: 30px;
   overflow: hidden;
   line-height: 16px;
+  max-height: 83px;
+}
+
+.feed-time {
+  font-size: 11px;
+  color: #626262;
+  position: relative;
+  white-space: nowrap;
+}
+
+.footer {
+  width: 100%;
+  height: 26px;
+  background: #222;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.show-more {
+  float: right;
+  display: block;
+  padding: 0 22px 0 5px;
+}
+
+.footer > span.show-more > a {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+.footer > span.show-more > a:hover {
+    border-bottom: 1px solid #888888;
 }
