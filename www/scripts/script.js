@@ -1,5 +1,5 @@
 var xmlhttp, obj;
-var url = 'http://nodexperts.com/blog/wp-json/wp/v2/news'
+var url = 'http://localhost:8000/getFeed'
 var feeds = [];
 var intervalTime = 1800000; // 30 minutes
 
@@ -29,35 +29,35 @@ $(document).ready(function () {
 
   $('#blogs').click('click', function () {
     var feedsByBlogs = feeds.filter(function (feed) {
-      return feed.type === 'blogs';
+      return feed.category === 'blogs';
     });
     populatePopup(feedsByBlogs);
   });
 
   $('#packages').click('click', function () {
     var feedsByBlogs = feeds.filter(function (feed) {
-      return feed.type === 'packages';
+      return feed.category === 'packages';
     });
     populatePopup(feedsByBlogs);
   });
 
   $('#workshops').click('click', function () {
     var feedsByBlogs = feeds.filter(function (feed) {
-      return feed.type === 'workshops';
+      return feed.category === 'workshops';
     });
     populatePopup(feedsByBlogs);
   });
 
   $('#daily-quotes').click('click', function () {
     var feedsByBlogs = feeds.filter(function (feed) {
-      return feed.type === 'daily-quotes';
+      return feed.category === 'daily-quotes';
     });
     populatePopup(feedsByBlogs);
   });
 
   $('#news').click('click', function () {
     var feedsByBlogs = feeds.filter(function (feed) {
-      return feed.type === 'news';
+      return feed.category === 'news';
     });
     populatePopup(feedsByBlogs);
   });
@@ -102,9 +102,14 @@ function populatePopup (data) {
       src: img_url,
     }).addClass('feed-img').appendTo(feedImage);
 
-    feedTitle.innerHTML = item.title.rendered;
-    feedDesc.innerHTML = item.content.rendered;
-    feedTime.innerHTML = new Date(item.date).toUTCString();
+    // NOTE: For nx WP end point
+    // feedTitle.innerHTML = item.title.rendered;
+    // feedDesc.innerHTML = item.content.rendered;
+    // feedTime.innerHTML = new Date(item.date).toUTCString();
+
+    feedTitle.innerHTML = item.title;
+    feedDesc.innerHTML = item.description;
+    feedTime.innerHTML = new Date(item.created_at).toUTCString();
 
     $(divLabel2).append(feedImage);
     $(divLabel2).append(feedTitle).append(feedTime);

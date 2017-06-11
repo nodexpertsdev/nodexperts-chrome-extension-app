@@ -10,13 +10,17 @@
    "default_popup": "index.html"
   },
   "permissions": [
-   "activeTab"
+   "activeTab",
+   "gcm",
+   "storage",
+   "notifications"
  ],
  "content_scripts": [
   {
     "matches": ["*://*/*"],
     "js": [
       "www/scripts/jquery-3.2.1.min.js",
+      "www/scripts/service-wroker-init.js",
       "www/scripts/script.js"
     ],
     "css": [
