@@ -9,10 +9,6 @@
    "default_popup": "index.html"
   },
   "permissions": [
-   "tabs",
-   "activeTab",
-   "gcm",
-   "storage",
    "notifications"
  ],
  "content_scripts": [

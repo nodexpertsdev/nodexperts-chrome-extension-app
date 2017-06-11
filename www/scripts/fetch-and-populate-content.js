@@ -12,7 +12,7 @@ function fetchNXFeeds() {
  xmlhttp.onreadystatechange = function() {
    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
      feeds = JSON.parse(xmlhttp.responseText);
-     populatePopup(feeds.splice(0, 20))
+     populatePopup(feeds)
    }
  }
  xmlhttp.open("GET", nxFeedsURL, true);
