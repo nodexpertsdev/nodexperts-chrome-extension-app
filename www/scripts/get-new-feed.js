@@ -2,8 +2,8 @@
  * @file Hits API every 30 mins and if response is `object` and then creates a new Notification
  */
 
-var nxLatestURL = 'http://localhost:8000/checkForFeeds'
-var intervalTime = 1800000; // 30 mins
+var nxLatestURL = 'https://nx-feed-server.herokuapp.com/checkForFeeds'
+var intervalTime = 1800000/10; // 30 mins
 
 function fetchLatestNXFeeds() {
  xmlhttp = new XMLHttpRequest();

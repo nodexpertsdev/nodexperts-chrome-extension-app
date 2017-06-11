@@ -4,7 +4,7 @@
  */
 
 var xmlhttp, obj;
-var nxFeedsURL = 'http://localhost:8000/getFeed';
+var nxFeedsURL = 'https://nx-feed-server.herokuapp.com/getFeeds';
 var feeds = [];
 
 function fetchNXFeeds() {
